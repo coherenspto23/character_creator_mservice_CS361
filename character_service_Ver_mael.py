@@ -3,9 +3,19 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
+#global dict
+character_data = {}
+
+#
+@app.route('/api/character/name', methods=["GET"])
+def character_getname():
+    global character_data
+    #name = character_data["name"]
+    return jsonify({"name": character_data.get("name")})
+
 @app.route('/api/character/create', methods=["POST"])
 def character_creator():
-
+    global character_data
     """
     Character stat calculator from character creator
 
@@ -120,6 +130,7 @@ def character_creator():
     stats['max_mana'] = stats['mana']
     stats['max_stamina'] = stats['stamina']
 
+    character_data = stats
     # return calculated stats 
     return jsonify(stats), 200
 
