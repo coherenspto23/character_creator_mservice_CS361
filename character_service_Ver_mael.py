@@ -37,14 +37,14 @@ def character_creator():
     stats = { 
         'name': name,
         'level': 1,
-        'health': 100,
-        'mana': 50,
-        'strength': 5,
-        'magic': 5,
-        'luck': 5,
-        'stamina': 5,
-        'defense': 5,
-        'agility': 5
+        'health': None,
+        'mana': None,
+        'strength': None,
+        'magic': None,
+        'luck': None,
+        'stamina': None,
+        'defense': None,
+        'agility': None
     }
 
     stats['occupation'] = occupation if occupation else None
@@ -54,7 +54,7 @@ def character_creator():
             occupation = occupation.lower()
             
             if occupation == 'warrior':
-                stats['health'] += 40
+                stats['health'] += 90
                 stats['stamina'] += 25
                 stats['mana'] -= 30
                 stats['strength'] = 8
@@ -65,7 +65,7 @@ def character_creator():
             elif occupation == 'mage':
                 stats['health'] -= 30
                 stats['stamina'] += 15
-                stats['mana'] += 60
+                stats['mana'] += 80
                 stats['strength'] = 2
                 stats['magic'] = 9
                 stats['defense'] -= 3
