@@ -44,7 +44,8 @@ def character_creator():
         'luck': 5,
         'stamina': 5,
         'defense': 5,
-        'agility': 5
+        'agility': 5,
+        'equipped_items': equipped_items
     }
 
     stats['occupation'] = occupation if occupation else None
