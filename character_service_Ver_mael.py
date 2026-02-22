@@ -37,14 +37,14 @@ def character_creator():
     stats = { 
         'name': name,
         'level': 1,
-        'health': None,
-        'mana': None,
-        'strength': None,
-        'magic': None,
-        'luck': None,
-        'stamina': None,
-        'defense': None,
-        'agility': None
+        'health': 100,
+        'mana': 50,
+        'strength': 5,
+        'magic': 5,
+        'luck': 5,
+        'stamina': 5,
+        'defense': 5,
+        'agility': 5
     }
 
     stats['occupation'] = occupation if occupation else None
