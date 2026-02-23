@@ -14,7 +14,7 @@
 This microservice is a way to calculate character stats, and it communicates with the client with Flask. The client sends data about the character (such as equipped items, name, background, and/or occupation) and then the microservice calculates stats such as Luck, Strength, and Defense. This is what is returned to the client program.
 
 ## Request Data
-## Formatting
+  ## Formatting
 <img width="252" height="226" alt="image" src="https://github.com/user-attachments/assets/bcdec569-9128-4182-baef-a66eeea77548" />
 
 
