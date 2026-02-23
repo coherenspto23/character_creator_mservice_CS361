@@ -5,12 +5,10 @@ service_url = "http://localhost:5003/api/character/create"
 
 #test
 data = {
-    "name": "Callipso"
+    "name": "Callipso",
+    "equipped_items": "top_hat"
 }
 
 response = requests.post(service_url, json = data)
 print(response.json())
 
-#this is for get
-get_request = requests.get("http://localhost:5003/api/character/name")
-print(get_request.json())
