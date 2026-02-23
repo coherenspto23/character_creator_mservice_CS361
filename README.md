@@ -15,7 +15,7 @@ This microservice is a way to calculate character stats, and it communicates wit
 
 ## Requesting Data
 ### Formatting the data so the microservice can read it
-'''python
+```python
 
 data = {
     "name": "Callipso",
@@ -28,20 +28,20 @@ data = {
         "shoes" : "spats"
         }]
 }
-'''
+```
 Data must be in a dictionary. Not all key/value pairs must be entered, there are standard values if you do not wish to assign a name. The key "name" can be given any value as long as it is a string. The key "occupation" must have one of the following values: None, "warrior", "mage", "rogue". The key "background" must have one of the following values: None, "noble", "soldier", "scholar", "commoner", "merchant", "outlaw". The equipped_items key must have it's values placed in a dictionary within a list. See example above.
 
 ### Sending the Request through Flask
 
 First, you must start the microservice. In a seperate terminal, run the main program. This will send the data dictionary to the microservice, as seen in the example below.
-'''
+```
 response = requests.post(service_url, json = data)
-'''
+```
 ## Receiving Data
-'''
+```
 response = requests.post(service_url, json = data)
 print(response.json())
-'''
+```
 Data will be returned from the microservice and stored in the response variable. To view it easily, use a print statement.
 
 ## UML Diagram
