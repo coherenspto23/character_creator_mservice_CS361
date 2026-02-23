@@ -16,6 +16,7 @@ This microservice is a way to calculate character stats, and it communicates wit
 ## Requesting Data
 ### Formatting the data so the microservice can read it
 '''
+
 data = {
     "name": "Callipso",
 
